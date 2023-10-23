@@ -1,0 +1,174 @@
+* {
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: salmon;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.to-do {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 800px;
+  min-height: 450px;
+  padding: 40px 30px 70px;
+}
+.to-do h2 {
+  text-align: center;
+  color: rgb(19, 152, 235);
+  display: block;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  margin-bottom: 50px;
+  background: #edeef0;
+  border-radius: 50px;
+}
+input {
+  font-size: 15px;
+  padding: 15px;
+  width: 100%;
+  max-width: 350px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+button {
+  background-color: #ff5945;
+  color: #fff;
+  border-radius: 40px;
+  padding: 20px 35px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+  font-size: 20px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul li .img-container {
+  display: flex;
+}
+ul li .img-container img {
+  width: 100%;
+  max-width: 40px;
+  max-height: 50px;
+  margin: 8px;
+  cursor: pointer;
+}
+.dropdown {
+  min-width: 100px;
+  max-width: 150px;
+  position: relative;
+  margin: 10px 50px;
+}
+.select {
+  background: #2a2f3b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px #2a2f3b solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.select-clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+.select:hover {
+  background: #323741;
+}
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.3s;
+}
+.caret-rotate {
+  transform: rotate(180deg);
+}
+.menu {
+  list-style: none;
+  padding: 0.2rem 0.5em;
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menu li:hover {
+  background: #2a2d35;
+}
+.active {
+  background: #23242a;
+}
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+button.edit-button {
+  display: inline-block;
+}
+
+/* Add these styles to your existing CSS */
+
+/* Styles for the description buttons */
+ul li button.description-button,
+ul li button.view-description-button {
+  background-color: #50b3a2;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 0px;
+  margin-left: 15px;
+}
+
+/* Styles for the displayed description */
+ul li .description {
+  font-size: 11px;
+  margin-top: 20px;
+  white-space: pre-wrap; /* Preserve line breaks in description */
+  display: none; /* Initially hidden */
+}
